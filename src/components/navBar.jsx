@@ -1,9 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import logo from  '../assets/img/logoazula2.jpg';
+import logo from  '../assets/img/logoazula2.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -44,15 +43,15 @@ function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home') }>Home</Nav.Link>
-            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')} >Skills</Nav.Link>
-            <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Project</Nav.Link>
+            <Nav.Link to="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home') }>Home</Nav.Link>
+            <Nav.Link to="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')} >Skills</Nav.Link>
+            <Nav.Link to="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Project</Nav.Link>
           </Nav>
           <span className='navbar-text'>
             <div className="social-icon">
-              <Link> <img src={navIcon1} alt="" /> </Link>
-              <Link> <img src={navIcon2} alt="" /> </Link>
-              <Link> <img src={navIcon3} alt="" /> </Link>
+              <a href='#/'> <img src={navIcon1} alt="" /> </a>
+              <a href='#/'> <img src={navIcon2} alt="" /> </a>
+              <a href='#/'> <img src={navIcon3} alt="" /> </a>
             </div>
             <button className='vvd'onClick={() => console.log('connect') } >
               <span>Contactame</span>
