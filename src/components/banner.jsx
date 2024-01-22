@@ -9,7 +9,7 @@ function Banner() {
     //  LOGICA PARA APARECER Y DESAPARECER TEXTO
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Desarrolladora Web", "Front-End", "Desarrolladora de software"];
+  const toRotate = ["Front-End Developer", "Software Developer"];
   const[text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random()*100);
   const period = 2000;
@@ -48,10 +48,10 @@ function Banner() {
   return (
     <section className='banner' id='home'>
       <Container>
-        <Row className='align-items-center'>
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <span className='tagline'> ¡Bienvenido a mi espacio digital!</span>
-            <h1>{`Hola soy Patricia `} <span  className='wrap'> {text} </span></h1>
+            <h1>{`Hola soy Patricia,`} <span  className='wrap'> {text} </span></h1>
             <p>Tecnologa en Analisis y Desarrollo de software dedicada a convertir ideas en experiencias interactivas y funcionales. Mi camino en el universo del desarrollo web ha sido estimulante, y en este espacio, te invito a echar un vistazo a mi recorrido, proyectos y habilidades. ¡Aventúrate a descubrir de qué manera puedo aportar a tu próximo proyecto!</p>
             <button onClick={() => console.log('connect')}>Contactame <HiOutlineArrowCircleRight size={25}/></button>
           </Col>
