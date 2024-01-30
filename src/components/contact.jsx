@@ -26,23 +26,48 @@ function Contact() {
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
-    setButtonText('Sending...');
-    let response = await fetch("http://localhost:5000/contact",{
+    setButtonText('Enviando...');
+
+    try{
+      const response = await fetch("http://localhost:5000/contact",{
       method: "POST",
       headers: {
         "Content-Type": "Application/json;charset=utf-8",
       },
       body: JSON.stringify(formDetails),
     });
-    setButtonText('send');
-    let result = response.json();
-    setFormDetails(formDetails);
-    if (result.code ===200){
-      setStatus({success: true, message: 'Message succefully'});
-    }else{
-      setStatus({success: false, message: 'Something went wrong please try again later'});
+    }
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+
+    const result = await response.json();
+      setFormDetails(formInitialDetails);
+
+      if (result.code === 200) {
+        setStatus({ success: true, message: 'Mensaje enviado exitosamente' });
+      } else {
+        setStatus({ success: false, message: 'Algo salió mal, por favor intenta nuevamente más tarde' });
+      }
+
+    } catch (error) {
+      setStatus({ success: false, message: 'Error de red, por favor verifica tu conexión e intenta nuevamente' });
+    } finally {
+      setButtonText('Enviar');
     }
   };
+
+
+  //   let 
+  //   setButtonText('send');
+  //   let result = response.json();
+  //   setFormDetails(formDetails);
+  //   if (result.code ===200){
+  //     setStatus({success: true, message: 'Message succefully'});
+  //   }else{
+  //     setStatus({success: false, message: 'Something went wrong please try again later'});
+  //   }
+  // };
 
 
   return (

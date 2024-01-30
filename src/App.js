@@ -7,7 +7,7 @@ import Contact from './components/contact';
 import Footer from './components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <NavBar/>
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

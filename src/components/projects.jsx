@@ -17,6 +17,8 @@ function Projects() {
       title:"Software de valoracion Antropometrica",
       description:"valoracion Antropometrica",
       imgUrl: projImg1,
+      url:'https://github.com/Azula93/BodyScanLogin'
+      
       
     },
 
@@ -24,6 +26,7 @@ function Projects() {
       title:"Product Card",
       description:"product preview card",
       imgUrl: projImg2,
+      url:'https://github.com/Azula93/product-preview-card-component-main'
       
     },
 
@@ -31,12 +34,14 @@ function Projects() {
       title:"Codificador",
       description:"Encriptador de texto",
       imgUrl: projImg3,
+      url:'https://github.com/Azula93/Challenge-Alura'
     },
 
     {
       title:"Interactive Rating",
       description:"Interactive Rating",
       imgUrl: projImg4,
+      url:'https://github.com/Azula93/BodyScanLogin'
     },
   ]
 
@@ -55,15 +60,15 @@ function Projects() {
               <Tab.Container id="projects-tabs"   defaultActiveKey="first">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
               <Nav.Item >
-                <Nav.Link eventKey="first" >Antropometria</Nav.Link>
+                <Nav.Link target='blank' eventKey="first" >Antropometria</Nav.Link>
               </Nav.Item>
 
               <Nav.Item >
-                <Nav.Link eventKey="second" >Product Card</Nav.Link>
+                <Nav.Link target='blank' eventKey="second" >Product Card</Nav.Link>
               </Nav.Item>
 
               <Nav.Item >
-                <Nav.Link eventKey="third" >Codificador</Nav.Link>
+                <Nav.Link target='blank' eventKey="third" >Codificador</Nav.Link>
               </Nav.Item>
 
             </Nav>
@@ -75,6 +80,7 @@ function Projects() {
                   projects.length > 1 ? (
                     <ProjectCard 
                       key={0} // o el índice del segundo proyecto en el arreglo
+                      url={projects.url}
                       {...projects[0]}
                     />
                   ) : null
@@ -98,6 +104,7 @@ function Projects() {
                   projects.length > 1 ? (
                     <ProjectCard 
                       key={1} // o el índice del segundo proyecto en el arreglo
+                      url={projects.url}
                       {...projects[1]}
                     />
                   ) : null
@@ -112,6 +119,7 @@ function Projects() {
                   projects.length > 1 ? (
                     <ProjectCard 
                       key={2} // o el índice del segundo proyecto en el arreglo
+                      url={projects.url}
                       {...projects[2]}
                     />
                   ) : null

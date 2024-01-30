@@ -41,6 +41,7 @@
   transition: 0.3s ease-in-out;
   text-align: center;
   z-index: 0;
+  cursor: pointer;
 }
 .project .nav.nav-pills .nav-link::before {
     content: "";
@@ -115,6 +116,16 @@
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+
+.linkprojects{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+
+
 .background-image-right {
   top: 20%;
   position: absolute;
